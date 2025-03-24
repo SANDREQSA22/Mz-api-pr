@@ -10,6 +10,6 @@ class GenreAdmin(admin.ModelAdmin):
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'published_date', 'display_genres', 'borrowed_by', 'borrow_date')  
+    list_display = ('title', 'author', 'published_date','borrowed_by', 'borrow_date')  
     search_fields = ('title', 'author', 'borrowed_by')  
     list_filter = ('published_date', 'genres')  

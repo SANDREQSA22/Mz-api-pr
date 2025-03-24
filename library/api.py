@@ -4,7 +4,6 @@ from .models import Book, Genre
 from datetime import datetime
 from typing import List, Dict, Optional
 
-api = NinjaAPI(version="1.0", urls_namespace="library_api")
 router = Router()
 
 # --------------------- BOOKS API ---------------------
@@ -50,7 +49,6 @@ def borrow_book(request, book_id: int, borrowed_by: str):
 
     return {"message": f"Book '{book.title}' borrowed by {borrowed_by}"}
 
-api.add_router("/api", router)
 
 # --------------------- GENRES API ---------------------
 

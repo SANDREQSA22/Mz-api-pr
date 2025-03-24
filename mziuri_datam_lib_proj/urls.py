@@ -1,9 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
-from library.api import api 
+from api.urls import api
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('library/', include('library.urls')), 
+    path('admin/', admin.site.urls), 
     path('api/', api.urls),  
 ]
